@@ -1,0 +1,69 @@
+[0.009s] Invoking command in '/home/robot_ws/build/nsc_core': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/robot_ws/src/nsc_core -DCMAKE_INSTALL_PREFIX=/home/robot_ws/install/nsc_core
+[0.041s] -- The C compiler identification is GNU 11.4.0
+[0.073s] -- The CXX compiler identification is GNU 11.4.0
+[0.079s] -- Detecting C compiler ABI info
+[0.116s] -- Detecting C compiler ABI info - done
+[0.120s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.120s] -- Detecting C compile features
+[0.121s] -- Detecting C compile features - done
+[0.122s] -- Detecting CXX compiler ABI info
+[0.167s] -- Detecting CXX compiler ABI info - done
+[0.172s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.173s] -- Detecting CXX compile features
+[0.173s] -- Detecting CXX compile features - done
+[0.175s] -- Found ament_cmake: 1.3.9 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.264s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.328s] -- Found rclpy: 3.3.13 (/opt/ros/humble/share/rclpy/cmake)
+[0.382s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.442s] -- Added test 'copyright' to check source files copyright and LICENSE
+[0.443s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.443s] -- Added test 'lint_cmake' to check CMake code style
+[0.443s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[0.443s] -- Added test 'xmllint' to check XML markup files
+[0.444s] -- Configuring done
+[0.447s] -- Generating done
+[0.448s] -- Build files have been written to: /home/robot_ws/build/nsc_core
+[0.449s] Invoked command in '/home/robot_ws/build/nsc_core' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/robot_ws/src/nsc_core -DCMAKE_INSTALL_PREFIX=/home/robot_ws/install/nsc_core
+[0.449s] Invoking command in '/home/robot_ws/build/nsc_core': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/robot_ws/build/nsc_core -- -j16 -l16
+[0.478s] Built target ament_cmake_python_copy_src
+[0.599s] running egg_info
+[0.599s] creating src.egg-info
+[0.599s] writing src.egg-info/PKG-INFO
+[0.600s] writing dependency_links to src.egg-info/dependency_links.txt
+[0.600s] writing top-level names to src.egg-info/top_level.txt
+[0.600s] writing manifest file 'src.egg-info/SOURCES.txt'
+[0.600s] reading manifest file 'src.egg-info/SOURCES.txt'
+[0.600s] writing manifest file 'src.egg-info/SOURCES.txt'
+[0.617s] Built target ament_cmake_python_build_src_egg
+[0.624s] Invoked command in '/home/robot_ws/build/nsc_core' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/robot_ws/build/nsc_core -- -j16 -l16
+[0.642s] Invoking command in '/home/robot_ws/build/nsc_core': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/robot_ws/build/nsc_core
+[0.647s] -- Install configuration: ""
+[0.647s] -- Installing: /home/robot_ws/install/nsc_core/share/nsc_core/environment/pythonpath.sh
+[0.647s] -- Installing: /home/robot_ws/install/nsc_core/share/nsc_core/environment/pythonpath.dsv
+[0.647s] -- Installing: /home/robot_ws/install/nsc_core/local/lib/python3.10/dist-packages/src-0.0.0-py3.10.egg-info
+[0.647s] -- Installing: /home/robot_ws/install/nsc_core/local/lib/python3.10/dist-packages/src-0.0.0-py3.10.egg-info/top_level.txt
+[0.647s] -- Installing: /home/robot_ws/install/nsc_core/local/lib/python3.10/dist-packages/src-0.0.0-py3.10.egg-info/SOURCES.txt
+[0.647s] -- Installing: /home/robot_ws/install/nsc_core/local/lib/python3.10/dist-packages/src-0.0.0-py3.10.egg-info/PKG-INFO
+[0.647s] -- Installing: /home/robot_ws/install/nsc_core/local/lib/python3.10/dist-packages/src-0.0.0-py3.10.egg-info/dependency_links.txt
+[0.647s] -- Installing: /home/robot_ws/install/nsc_core/local/lib/python3.10/dist-packages/src
+[0.647s] -- Installing: /home/robot_ws/install/nsc_core/local/lib/python3.10/dist-packages/src/__init__.py
+[0.665s] Listing '/home/robot_ws/install/nsc_core/local/lib/python3.10/dist-packages/src'...
+[0.666s] Compiling '/home/robot_ws/install/nsc_core/local/lib/python3.10/dist-packages/src/__init__.py'...
+[0.668s] -- Installing: /home/robot_ws/install/nsc_core/share/nsc_core/src
+[0.668s] -- Installing: /home/robot_ws/install/nsc_core/share/nsc_core/src/__init__.py
+[0.668s] -- Installing: /home/robot_ws/install/nsc_core/share/ament_index/resource_index/package_run_dependencies/nsc_core
+[0.668s] -- Installing: /home/robot_ws/install/nsc_core/share/ament_index/resource_index/parent_prefix_path/nsc_core
+[0.668s] -- Installing: /home/robot_ws/install/nsc_core/share/nsc_core/environment/ament_prefix_path.sh
+[0.668s] -- Installing: /home/robot_ws/install/nsc_core/share/nsc_core/environment/ament_prefix_path.dsv
+[0.668s] -- Installing: /home/robot_ws/install/nsc_core/share/nsc_core/environment/path.sh
+[0.668s] -- Installing: /home/robot_ws/install/nsc_core/share/nsc_core/environment/path.dsv
+[0.668s] -- Installing: /home/robot_ws/install/nsc_core/share/nsc_core/local_setup.bash
+[0.668s] -- Installing: /home/robot_ws/install/nsc_core/share/nsc_core/local_setup.sh
+[0.668s] -- Installing: /home/robot_ws/install/nsc_core/share/nsc_core/local_setup.zsh
+[0.668s] -- Installing: /home/robot_ws/install/nsc_core/share/nsc_core/local_setup.dsv
+[0.668s] -- Installing: /home/robot_ws/install/nsc_core/share/nsc_core/package.dsv
+[0.668s] -- Installing: /home/robot_ws/install/nsc_core/share/ament_index/resource_index/packages/nsc_core
+[0.668s] -- Installing: /home/robot_ws/install/nsc_core/share/nsc_core/cmake/nsc_coreConfig.cmake
+[0.668s] -- Installing: /home/robot_ws/install/nsc_core/share/nsc_core/cmake/nsc_coreConfig-version.cmake
+[0.669s] -- Installing: /home/robot_ws/install/nsc_core/share/nsc_core/package.xml
+[0.670s] Invoked command in '/home/robot_ws/build/nsc_core' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/robot_ws/build/nsc_core

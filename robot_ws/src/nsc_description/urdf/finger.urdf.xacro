@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+    <xacro:macro name="finger" params="side length width height mass pos_x pos_y pos_z lower_limit upper_limit">
+        <link name="${side}_finger_link">
+            <visual>
+                <origin xyz="0 0 -0.03" rpy="0 0 0"/>
+                <geometry>
+                    <box size="${length} ${width} ${height}"/>
+                </geometry>
+            </visual>
+
+            <collision>
+                <origin xyz="0 0 -0.03" rpy="0 0 0"/>
+                <geometry>
+                    <box size="${length} ${width} ${height}"/>
+                </geometry>
+            </collision>
+
+            <inertial>
+                <origin xyz="0 0 0" rpy="0 0 0"/>
+                <mass value="${mass}"/>
+                <inertia ixx="${(1/12) * mass * ((width * width) + (height * height))}" ixy="0.0" ixz="0.0"
+                            iyy="${(1/12) * mass * ((length * length) + (height * height))}" iyz="0.0"
+                            izz="${(1/12) * mass * ((length * length) + (width * width))}"/>
+            </inertial>
+        </link>
+        
+        <joint name="${side}_finger_joint" type="revolute">
+            <origin xyz="${pos_x} ${pos_y} ${pos_z}" rpy="0 0 0"/>
+            <parent link="${side}_hand_link3"/>
+            <child link="${side}_finger_link"/>
+            <axis xyz="0 1 0" />
+            <limit lower="${lower_limit}" upper="${upper_limit}" effort="-1" velocity="-1"/>
+        </joint>
+    </xacro:macro>
+</robot>

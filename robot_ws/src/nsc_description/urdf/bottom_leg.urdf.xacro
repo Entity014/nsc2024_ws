@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+    <xacro:macro name="bottom_leg" params="side length width height mass pos_z">
+        <link name="${side}_bottom_leg_link">
+            <visual>
+                <origin xyz="0 0 -0.1" rpy="0 0 0"/>
+                <geometry>
+                    <box size="${length} ${width} ${height}"/>
+                </geometry>
+            </visual>
+
+            <collision>
+                <origin xyz="0 0 -0.1" rpy="0 0 0"/>
+                <geometry>
+                    <box size="${length} ${width} ${height}"/>
+                </geometry>
+            </collision>
+
+            <inertial>
+                <origin xyz="0 0 0" rpy="0 0 0"/>
+                <mass value="${mass}"/>
+                <inertia ixx="${(1/12) * mass * ((width * width) + (height * height))}" ixy="0.0" ixz="0.0"
+                            iyy="${(1/12) * mass * ((length * length) + (height * height))}" iyz="0.0"
+                            izz="${(1/12) * mass * ((length * length) + (width * width))}"/>
+            </inertial>
+        </link>
+        
+        <joint name="${side}_bottom_leg_joint" type="revolute">
+            <origin xyz="0 0 ${pos_z}" rpy="0 0 0"/>
+            <parent link="${side}_leg_link"/>
+            <child link="${side}_bottom_leg_link"/>
+            <axis xyz="1 0 0" />
+            <limit lower="-${pi/2}" upper="0" effort="-1" velocity="-1"/>
+        </joint>
+    </xacro:macro>
+</robot>

@@ -1,0 +1,47 @@
+controller_manager:
+  ros__parameters:
+    update_rate: 100
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+    right_arm_controller:
+      type: position_controllers/JointGroupPositionController
+
+    left_arm_controller:
+      type: position_controllers/JointGroupPositionController
+
+# Position Controllers ---------------------------------------
+right_arm_controller:
+  ros__parameters:
+    joints:
+      - right_top_arm_joint1
+      - right_top_arm_joint2
+      - right_top_arm_joint3
+      - right_arm_joint
+      - right_hand_joint1
+      - right_hand_joint2
+      - right_hand_joint3
+      - right_finger_joint
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+      - velocity
+
+left_arm_controller:
+  ros__parameters:
+    joints:
+      - left_top_arm_joint1
+      - left_top_arm_joint2
+      - left_top_arm_joint3
+      - left_arm_joint
+      - left_hand_joint1
+      - left_hand_joint2
+      - left_hand_joint3
+      - left_finger_joint
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+      - velocity

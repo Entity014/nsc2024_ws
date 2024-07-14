@@ -1,0 +1,250 @@
+<?xml version="1.0"?>
+<robot name="nsc_bot" xmlns:xacro="http://ros.org/wiki/xacro">
+    <xacro:include filename="$(find nsc_description)/urdf/head.urdf.xacro"/>
+    <xacro:include filename="$(find nsc_description)/urdf/base.urdf.xacro"/>
+    <xacro:include filename="$(find nsc_description)/urdf/leg.urdf.xacro"/>
+    <xacro:include filename="$(find nsc_description)/urdf/foot.urdf.xacro"/>
+    <xacro:include filename="$(find nsc_description)/urdf/arm.urdf.xacro"/>
+    <xacro:include filename="$(find nsc_description)/urdf/hand.urdf.xacro"/>
+    <xacro:include filename="$(find nsc_description)/urdf/finger.urdf.xacro"/>
+    <xacro:include filename="$(find nsc_description)/urdf/top_foot.urdf.xacro"/>
+    <xacro:include filename="$(find nsc_description)/urdf/top_arm.urdf.xacro"/>
+    <xacro:include filename="$(find nsc_description)/urdf/top_leg.urdf.xacro"/>
+    <xacro:include filename="$(find nsc_description)/urdf/bottom_leg.urdf.xacro"/>
+    <xacro:include filename="$(find nsc_description)/urdf/properties.urdf.xacro"/>
+
+    <xacro:head
+        length="${head_length}"
+        width="${head_width}"
+        height="${head_height}"
+        mass="${head_mass}"
+        pos_z="${head_pos_z}"
+    />
+
+    <xacro:base
+        length="${base_length}"
+        width="${base_width}"
+        height="${base_height}"
+        mass="${base_mass}"
+        pos_z="${base_pos_z}"
+    />
+
+    <xacro:top_arm
+        side="right"
+        length="${top_arm_length}"
+        width="${top_arm_width}"
+        height="${top_arm_height}"
+        mass="${top_arm_mass}"
+        pos_x="${top_arm_pos_x}"
+        pos_y="${top_arm_pos_y}"
+        pos_z="${top_arm_pos_z}"
+        lower_limit="${-pi}"
+        upper_limit="0"
+    />
+
+    <xacro:top_arm
+        side="left"
+        length="${top_arm_length}"
+        width="${top_arm_width}"
+        height="${top_arm_height}"
+        mass="${top_arm_mass}"
+        pos_x="-${top_arm_pos_x}"
+        pos_y="${top_arm_pos_y}"
+        pos_z="${top_arm_pos_z}"
+        lower_limit="0"
+        upper_limit="${pi}"
+    />
+
+    <xacro:arm
+        side="right"
+        length="${arm_length}"
+        width="${arm_width}"
+        height="${arm_height}"
+        mass="${arm_mass}"
+        pos_x="${arm_pos_x}"
+        pos_y="${arm_pos_y}"
+        pos_z="${arm_pos_z}"
+    />
+
+    <xacro:arm
+        side="left"
+        length="${arm_length}"
+        width="${arm_width}"
+        height="${arm_height}"
+        mass="${arm_mass}"
+        pos_x="-${arm_pos_x}"
+        pos_y="${arm_pos_y}"
+        pos_z="${arm_pos_z}"
+    />
+
+    <xacro:hand
+        side="right"
+        length="${hand_length}"
+        width="${hand_width}"
+        height="${hand_height}"
+        mass="${hand_mass}"
+        pos_x="${hand_pos_x}"
+        pos_y="${hand_pos_y}"
+        pos_z="${hand_pos_z}"
+    />
+
+    <xacro:hand
+        side="left"
+        length="${hand_length}"
+        width="${hand_width}"
+        height="${hand_height}"
+        mass="${hand_mass}"
+        pos_x="-${hand_pos_x}"
+        pos_y="${hand_pos_y}"
+        pos_z="${hand_pos_z}"
+    />
+
+    <xacro:finger
+        side="right"
+        length="${finger_length}"
+        width="${finger_width}"
+        height="${finger_height}"
+        mass="${finger_mass}"
+        pos_x="${finger_pos_x}"
+        pos_y="${finger_pos_y}"
+        pos_z="${finger_pos_z}"
+        lower_limit="0"
+        upper_limit="${pi}"
+    />
+
+    <xacro:finger
+        side="left"
+        length="${finger_length}"
+        width="${finger_width}"
+        height="${finger_height}"
+        mass="${finger_mass}"
+        pos_x="${finger_pos_x}"
+        pos_y="${finger_pos_y}"
+        pos_z="${finger_pos_z}"
+        lower_limit="${-pi}"
+        upper_limit="0"
+    />
+
+    <xacro:top_leg
+        side="right"
+        length="${top_leg_length}"
+        width="${top_leg_width}"
+        height="${top_leg_height}"
+        mass="${top_leg_mass}"
+        pos_x="${top_leg_pos_x}"
+        pos_y="${top_leg_pos_y}"
+        pos_z="${top_leg_pos_z}"
+        lower_limit="${-pi/2}"
+        upper_limit="${pi/2}"
+    />
+
+    <xacro:top_leg
+        side="left"
+        length="${top_leg_length}"
+        width="${top_leg_width}"
+        height="${top_leg_height}"
+        mass="${top_leg_mass}"
+        pos_x="${-top_leg_pos_x}"
+        pos_y="${top_leg_pos_y}"
+        pos_z="${top_leg_pos_z}"
+        lower_limit="${-pi/2}"
+        upper_limit="${pi/2}"
+    />
+
+    <xacro:leg
+        side="right"
+        length="${leg_length}"
+        width="${leg_width}"
+        height="${leg_height}"
+        mass="${leg_mass}"
+        pos_z="${leg_pos_z}"
+    />
+
+    <xacro:leg
+        side="left"
+        length="${leg_length}"
+        width="${leg_width}"
+        height="${leg_height}"
+        mass="${leg_mass}"
+        pos_z="${leg_pos_z}"
+    />
+
+
+    <xacro:bottom_leg
+        side="right"
+        length="${bottom_leg_length}"
+        width="${bottom_leg_width}"
+        height="${bottom_leg_height}"
+        mass="${bottom_leg_mass}"
+        pos_z="${bottom_leg_pos_z}"
+    />
+
+    <xacro:bottom_leg
+        side="left"
+        length="${bottom_leg_length}"
+        width="${bottom_leg_width}"
+        height="${bottom_leg_height}"
+        mass="${bottom_leg_mass}"
+        pos_z="${bottom_leg_pos_z}"
+    />
+
+    <xacro:top_foot
+        side="right"
+        length="${top_foot_length}"
+        width="${top_foot_width}"
+        height="${top_foot_height}"
+        mass="${top_foot_mass}"
+        pos_z="${top_foot_pos_z}"
+    />
+
+    <xacro:top_foot
+        side="left"
+        length="${top_foot_length}"
+        width="${top_foot_width}"
+        height="${top_foot_height}"
+        mass="${top_foot_mass}"
+        pos_z="${top_foot_pos_z}"
+    />
+
+    <xacro:foot
+        side="right"
+        length="${foot_length}"
+        width="${foot_width}"
+        height="${foot_height}"
+        mass="${foot_mass}"
+        pos_x="${foot_pos_x}"
+        pos_y="${foot_pos_y}"
+        pos_z="${foot_pos_z}"
+    />
+
+    <xacro:foot
+        side="left"
+        length="${foot_length}"
+        width="${foot_width}"
+        height="${foot_height}"
+        mass="${foot_mass}"
+        pos_x="${foot_pos_x}"
+        pos_y="${foot_pos_y}"
+        pos_z="${foot_pos_z}"
+    />
+
+    <xacro:include filename="$(find nsc_description)/urdf/arm.transmission.xacro"/>
+
+    <ros2_control name="robot_gazebo_system" type="system">
+        <hardware>
+            <plugin>gazebo_ros2_control/GazeboSystem</plugin>
+        </hardware>
+        <xacro:arm_transmission side="right" />
+        <xacro:arm_transmission side="left" />
+        <xacro:arm_right_transmission/>
+        <xacro:arm_left_transmission/>
+    </ros2_control>
+
+    <gazebo>
+        <plugin name="gazebo_ros2_control_robot" filename="libgazebo_ros2_control.so">
+            <parameters>$(find nsc_description)/config/controllers.yaml</parameters>
+        </plugin>
+    </gazebo>
+
+
+</robot>
