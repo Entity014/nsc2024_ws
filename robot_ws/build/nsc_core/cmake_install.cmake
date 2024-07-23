@@ -67,7 +67,11 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/nsc_core" TYPE DIRECTORY FILES "/home/robot_ws/src/nsc_core/src")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/nsc_core" TYPE DIRECTORY FILES
+    "/home/robot_ws/src/nsc_core/src"
+    "/home/robot_ws/src/nsc_core/launch"
+    "/home/robot_ws/src/nsc_core/config"
+    )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)

@@ -6,8 +6,11 @@
 /home/robot_ws/install/nsc_core/local/lib/python3.10/dist-packages/src-0.0.0-py3.10.egg-info/dependency_links.txt
 /home/robot_ws/install/nsc_core/local/lib/python3.10/dist-packages/src/arm_control.py
 /home/robot_ws/install/nsc_core/local/lib/python3.10/dist-packages/src/__init__.py
+/home/robot_ws/install/nsc_core/local/lib/python3.10/dist-packages/src/gui.py
 /home/robot_ws/install/nsc_core/share/nsc_core/src/arm_control.py
 /home/robot_ws/install/nsc_core/share/nsc_core/src/__init__.py
+/home/robot_ws/install/nsc_core/share/nsc_core/src/gui.py
+/home/robot_ws/install/nsc_core/share/nsc_core/launch/imu.launch.py
 /home/robot_ws/install/nsc_core/share/ament_index/resource_index/package_run_dependencies/nsc_core
 /home/robot_ws/install/nsc_core/share/ament_index/resource_index/parent_prefix_path/nsc_core
 /home/robot_ws/install/nsc_core/share/nsc_core/environment/ament_prefix_path.sh

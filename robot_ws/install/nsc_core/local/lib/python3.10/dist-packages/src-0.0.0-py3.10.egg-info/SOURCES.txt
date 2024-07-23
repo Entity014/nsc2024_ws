@@ -1,6 +1,8 @@
 setup.py
 src/__init__.py
 src/arm_control.py
+src/gui.py
+src/tempCodeRunnerFile.py
 src.egg-info/PKG-INFO
 src.egg-info/SOURCES.txt
 src.egg-info/dependency_links.txt

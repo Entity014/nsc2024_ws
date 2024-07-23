@@ -15,14 +15,14 @@ class ArmController(Node):
         super().__init__("arm_controller_node")
         self.sub_imu1 = self.create_subscription(
             Imu,
-            "imu1/data",
+            "imu1/filtered",
             self.sub_imu1_callback,
             qos_profile=qos.qos_profile_sensor_data,
         )
         self.sub_imu1
         self.sub_imu2 = self.create_subscription(
             Imu,
-            "imu2/data",
+            "imu2/filtered",
             self.sub_imu2_callback,
             qos_profile=qos.qos_profile_sensor_data,
         )
@@ -59,18 +59,18 @@ class ArmController(Node):
         self.encoder = Float32()
         self.left_arm = Float64MultiArray()
         self.right_arm = Float64MultiArray()
+        self.hand = 0.0
 
     def timer_callback(self):
-        print(self.imu_arr1)
         self.right_arm.data = [
-            self.imu_arr1[2],
+            0.0,
             self.imu_arr1[1],
             self.imu_arr1[0],
-            np.deg2rad((self.encoder.data - 80) * 2),
+            float(constrain(np.deg2rad((self.encoder.data - 80) * 2), 0, np.pi)),
             0.0,
+            self.imu_arr2[1],
             0.0,
-            0.0,
-            0.0,
+            self.hand,
         ]
         self.pub_left_arm.publish(self.left_arm)
         self.pub_right_arm.publish(self.right_arm)
@@ -83,13 +83,9 @@ class ArmController(Node):
             imu_data.orientation.w,
         ]
         euler = transforms3d.euler.quat2euler(orientation)
-        self.imu_arr1[0] = euler[0]
-        self.imu_arr1[1] = -np.interp(euler[1], [-3.14, 3.14], [3.14, -3.14])
-        if euler[2] <= 0:
-            self.imu_arr1[2] = euler[2] + np.pi
-        else:
-            self.imu_arr1[2] = euler[2] - np.pi
-        self.imu_arr1[2] = np.interp(self.imu_arr1[2], [-3.14, 3.14], [3.14, -3.14])
+        self.imu_arr1[0] = euler[0] + 1.7
+        self.imu_arr1[1] = np.interp(euler[1], [-np.pi, np.pi], [np.pi, -np.pi])
+        self.imu_arr1[2] = euler[2]
 
     def sub_imu2_callback(self, imu_data):
         orientation = [
@@ -99,8 +95,9 @@ class ArmController(Node):
             imu_data.orientation.w,
         ]
         euler = transforms3d.euler.quat2euler(orientation)
+        print(self.imu_arr2)
         self.imu_arr2[0] = euler[0]
-        self.imu_arr2[1] = euler[1]
+        self.imu_arr2[1] = np.interp(euler[1], [-np.pi, np.pi], [np.pi, -np.pi])
         self.imu_arr2[2] = euler[2]
 
     def sub_encoder_callback(self, encoder_data):
@@ -108,6 +105,19 @@ class ArmController(Node):
 
     def sub_limit_callback(self, limit_data):
         self.limit = limit_data
+        if not self.limit.data:
+            self.hand = 1.57
+        else:
+            self.hand = 0.0
+
+
+def constrain(val, min_val, max_val):
+    if val < min_val:
+        return min_val
+    elif val > max_val:
+        return max_val
+    else:
+        return val
 
 
 def main(args=None):

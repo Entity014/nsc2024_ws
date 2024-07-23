@@ -22,7 +22,6 @@
 /home/robot_ws/install/nsc_description/share/nsc_description/launch/description.launch.py
 /home/robot_ws/install/nsc_description/share/nsc_description/launch/gazebo.launch.py
 /home/robot_ws/install/nsc_description/share/nsc_description/src/__init__.py
-/home/robot_ws/install/nsc_description/share/nsc_description/config/controllers.yaml
 /home/robot_ws/install/nsc_description/share/ament_index/resource_index/package_run_dependencies/nsc_description
 /home/robot_ws/install/nsc_description/share/ament_index/resource_index/parent_prefix_path/nsc_description
 /home/robot_ws/install/nsc_description/share/nsc_description/environment/ament_prefix_path.sh

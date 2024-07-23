@@ -2,10 +2,12 @@
 #include <micro_ros_platformio.h>
 #include <stdio.h>
 #include <Wire.h>
-#include <Adafruit_Sensor.h>
-#include <Adafruit_BNO055.h>
-#include <utility/imumaths.h>
+#include "I2Cdev.h"
+#include "MPU6050.h"
 #include <AS5600.h>
+
+#define USE_MPU6050_IMU
+#include "imu.h"
 
 #include <rcl/rcl.h>
 #include <rcl/error_handling.h>
@@ -50,6 +52,10 @@
 
 //------------------------------ < Define > -------------------------------------//
 
+IPAddress agent_ip(192, 168, 2, 34);
+char ssid[] = "REAI_ROBOT_2.4G";
+char psk[] = "reaicmubot";
+
 rcl_publisher_t encoder_publisher;
 rcl_publisher_t limit_publisher;
 rcl_publisher_t imu1_publisher;
@@ -79,8 +85,8 @@ enum states
   AGENT_DISCONNECTED
 } state;
 
-Adafruit_BNO055 bno055_1 = Adafruit_BNO055(55, 0x29);
-Adafruit_BNO055 bno055_2 = Adafruit_BNO055(55, 0x29);
+IMU imu1;
+IMU imu2;
 
 AS5600 as5600;
 
@@ -100,34 +106,35 @@ void tcaSelect(uint8_t i);
 
 void setup()
 {
-  pinMode(35, INPUT);
+  pinMode(19, INPUT);
 
   Wire.begin();
   Serial.begin(115200);
+  // set_microros_wifi_transports(ssid, psk, agent_ip, 8888);
   set_microros_serial_transports(Serial);
 
   tcaSelect(0);
-  if (!bno055_1.begin())
+  bool imu_ok1 = imu1.init();
+  if (!imu_ok1)
   {
-    Serial.print("No BNO055 detected on TCA9548A channel 0");
     while (1)
-      ;
+    {
+      flashLED(3);
+    }
   }
 
   tcaSelect(1); // Select channel 1
-  if (!bno055_2.begin())
+  bool imu_ok2 = imu2.init();
+  if (!imu_ok2)
   {
-    Serial.print("No BNO055 detected on TCA9548A channel 1");
     while (1)
-      ;
+    {
+      flashLED(3);
+    }
   }
+
   tcaSelect(2);
   as5600.isConnected();
-
-  tcaSelect(0);
-  bno055_1.setExtCrystalUse(true);
-  tcaSelect(1);
-  bno055_2.setExtCrystalUse(true);
 }
 
 void loop()
@@ -243,29 +250,16 @@ bool destroyEntities()
 
 void readSensor()
 {
-  imu1_msg.header.frame_id.data = (char *)"imu1_link";
-  imu1_msg.header.frame_id.size = strlen(imu1_msg.header.frame_id.data);
-  imu2_msg.header.frame_id.data = (char *)"imu2_link";
-  imu2_msg.header.frame_id.size = strlen(imu2_msg.header.frame_id.data);
-
   tcaSelect(0);
-  imu::Quaternion quat_1 = bno055_1.getQuat();
-  imu1_msg.orientation.x = quat_1.x();
-  imu1_msg.orientation.y = quat_1.y();
-  imu1_msg.orientation.z = quat_1.z();
-  imu1_msg.orientation.w = quat_1.w();
+  imu1_msg = imu1.getData();
 
   tcaSelect(1);
-  imu::Quaternion quat_2 = bno055_2.getQuat();
-  imu2_msg.orientation.x = quat_2.x();
-  imu2_msg.orientation.y = quat_2.y();
-  imu2_msg.orientation.z = quat_2.z();
-  imu2_msg.orientation.w = quat_2.w();
+  imu2_msg = imu2.getData();
 
   tcaSelect(2);
   encoder_msg.data = as5600.rawAngle() * AS5600_RAW_TO_DEGREES;
 
-  limit_msg.data = (bool)digitalRead(35);
+  limit_msg.data = (bool)digitalRead(19);
 }
 
 void publishData()

@@ -47,12 +47,12 @@ services:
   #   extends: uros-agent
   #   command: ros2 run micro_ros_agent micro_ros_agent serial -D /dev/ttyACM0 serial -b 115200
 
-  # gazebo:
-  #   extends: abu_compose
-  #   command: bash -c "source ~/.bashrc && ros2 launch abu_description gazebo.launch.py"
-
-  description:
+  gazebo:
     extends: nsc_compose
     command: bash -c "source ~/.bashrc && ros2 launch nsc_description gazebo.launch.py"
+  
+  imu:
+    extends: nsc_compose
+    command: bash -c "source ~/.bashrc && ros2 launch nsc_core imu.launch.py"
 
 
