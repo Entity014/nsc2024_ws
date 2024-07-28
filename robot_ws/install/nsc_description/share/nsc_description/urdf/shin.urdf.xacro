@@ -1,8 +1,0 @@
-<?xml version="1.0"?>
-<robot xmlns:xacro="http://ros.org/wiki/xacro">
-    <xacro:macro name="base" params="length width height mass pos_z">
-        <link name="base_footprint"/>
-        
-        <link name="base_link">
-    </xacro:macro>
-</robot>

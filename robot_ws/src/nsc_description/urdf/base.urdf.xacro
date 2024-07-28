@@ -5,9 +5,10 @@
         
         <link name="base_link">
             <visual>
-                <origin xyz="0 0 0" rpy="0 0 0"/>
+                <origin xyz="0 0 0" rpy="0 0 ${-pi/2}"/>
                 <geometry>
-                    <box size="${length} ${width} ${height}"/>
+                    <mesh filename="file://$(find nsc_description)/urdf/model/body.stl" scale="0.8 0.8 0.8"/>
+                    <!-- <box size="${length} ${width} ${height}"/> -->
                 </geometry>
             </visual>
 
@@ -33,6 +34,7 @@
         <joint name="fixed" type="fixed">
             <parent link="world"/>
             <child link="base_footprint"/>
+            <origin xyz="0 0 0.5" rpy="0 0 0"/>
         </joint>
         <joint name="base_to_footprint" type="fixed">
             <parent link="base_footprint"/>

@@ -1,8 +1,12 @@
 setup.py
 src/__init__.py
 src/arm_control.py
+src/camera_control.py
 src/gui.py
+src/joint_control.py
 src/tempCodeRunnerFile.py
+src/video_capture copy.py
+src/video_capture.py
 src.egg-info/PKG-INFO
 src.egg-info/SOURCES.txt
 src.egg-info/dependency_links.txt

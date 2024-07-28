@@ -1,0 +1,162 @@
+[0.000000] (-) TimerEvent: {}
+[0.000540] (nsc_core) JobQueued: {'identifier': 'nsc_core', 'dependencies': OrderedDict()}
+[0.000791] (nsc_description) JobQueued: {'identifier': 'nsc_description', 'dependencies': OrderedDict()}
+[0.001029] (nsc_core) JobStarted: {'identifier': 'nsc_core'}
+[0.010665] (nsc_description) JobStarted: {'identifier': 'nsc_description'}
+[0.015447] (nsc_core) JobProgress: {'identifier': 'nsc_core', 'progress': 'cmake'}
+[0.015923] (nsc_core) JobProgress: {'identifier': 'nsc_core', 'progress': 'build'}
+[0.016452] (nsc_core) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/robot_ws/build/nsc_core', '--', '-j16', '-l16'], 'cwd': '/home/robot_ws/build/nsc_core', 'env': OrderedDict([('HOSTNAME', 'entity014'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home'), ('ROS_PYTHON_VERSION', '3'), ('COLCON_PREFIX_PATH', '/home/robot_ws/install'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('XDG_RUNTIME_DIR', '/tmp/runtime-root'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('ROS_DOMAIN_ID', '10'), ('AMENT_PREFIX_PATH', '/home/robot_ws/install/nsc_description:/home/robot_ws/install/nsc_core:/opt/ros/humble'), ('NO_AT_BRIDGE', '1'), ('PWD', '/home/robot_ws/build/nsc_core'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/home/robot_ws/install/nsc_description/local/lib/python3.10/dist-packages:/home/robot_ws/install/nsc_core/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/robot_ws/install/nsc_description:/home/robot_ws/install/nsc_core:/opt/ros/humble')]), 'shell': False}
+[0.019455] (nsc_description) JobProgress: {'identifier': 'nsc_description', 'progress': 'cmake'}
+[0.019952] (nsc_description) JobProgress: {'identifier': 'nsc_description', 'progress': 'build'}
+[0.020182] (nsc_description) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/robot_ws/build/nsc_description', '--', '-j16', '-l16'], 'cwd': '/home/robot_ws/build/nsc_description', 'env': OrderedDict([('HOSTNAME', 'entity014'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home'), ('ROS_PYTHON_VERSION', '3'), ('COLCON_PREFIX_PATH', '/home/robot_ws/install'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('XDG_RUNTIME_DIR', '/tmp/runtime-root'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('ROS_DOMAIN_ID', '10'), ('AMENT_PREFIX_PATH', '/home/robot_ws/install/nsc_description:/home/robot_ws/install/nsc_core:/opt/ros/humble'), ('NO_AT_BRIDGE', '1'), ('PWD', '/home/robot_ws/build/nsc_description'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/home/robot_ws/install/nsc_description/local/lib/python3.10/dist-packages:/home/robot_ws/install/nsc_core/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/robot_ws/install/nsc_description:/home/robot_ws/install/nsc_core:/opt/ros/humble')]), 'shell': False}
+[0.083983] (nsc_core) StdoutLine: {'line': b'Built target ament_cmake_python_copy_src\n'}
+[0.085581] (nsc_description) StdoutLine: {'line': b'Built target ament_cmake_python_copy_src\n'}
+[0.099367] (-) TimerEvent: {}
+[0.199873] (-) TimerEvent: {}
+[0.300304] (-) TimerEvent: {}
+[0.352085] (nsc_description) StdoutLine: {'line': b'running egg_info\n'}
+[0.352365] (nsc_core) StdoutLine: {'line': b'running egg_info\n'}
+[0.352984] (nsc_description) StdoutLine: {'line': b'writing src.egg-info/PKG-INFO\n'}
+[0.353175] (nsc_core) StdoutLine: {'line': b'writing src.egg-info/PKG-INFO\n'}
+[0.353590] (nsc_description) StdoutLine: {'line': b'writing dependency_links to src.egg-info/dependency_links.txt\n'}
+[0.353748] (nsc_core) StdoutLine: {'line': b'writing dependency_links to src.egg-info/dependency_links.txt\n'}
+[0.353848] (nsc_description) StdoutLine: {'line': b'writing top-level names to src.egg-info/top_level.txt\n'}
+[0.353949] (nsc_core) StdoutLine: {'line': b'writing top-level names to src.egg-info/top_level.txt\n'}
+[0.356616] (nsc_core) StdoutLine: {'line': b"reading manifest file 'src.egg-info/SOURCES.txt'\n"}
+[0.356879] (nsc_description) StdoutLine: {'line': b"reading manifest file 'src.egg-info/SOURCES.txt'\n"}
+[0.357394] (nsc_description) StdoutLine: {'line': b"writing manifest file 'src.egg-info/SOURCES.txt'\n"}
+[0.357512] (nsc_core) StdoutLine: {'line': b"writing manifest file 'src.egg-info/SOURCES.txt'\n"}
+[0.400495] (-) TimerEvent: {}
+[0.404271] (nsc_description) StdoutLine: {'line': b'Built target ament_cmake_python_build_src_egg\n'}
+[0.404662] (nsc_core) StdoutLine: {'line': b'Built target ament_cmake_python_build_src_egg\n'}
+[0.419938] (nsc_description) CommandEnded: {'returncode': 0}
+[0.421754] (nsc_core) CommandEnded: {'returncode': 0}
+[0.444003] (nsc_description) JobProgress: {'identifier': 'nsc_description', 'progress': 'install'}
+[0.455753] (nsc_description) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/robot_ws/build/nsc_description'], 'cwd': '/home/robot_ws/build/nsc_description', 'env': OrderedDict([('HOSTNAME', 'entity014'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home'), ('ROS_PYTHON_VERSION', '3'), ('COLCON_PREFIX_PATH', '/home/robot_ws/install'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('XDG_RUNTIME_DIR', '/tmp/runtime-root'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('ROS_DOMAIN_ID', '10'), ('AMENT_PREFIX_PATH', '/home/robot_ws/install/nsc_description:/home/robot_ws/install/nsc_core:/opt/ros/humble'), ('NO_AT_BRIDGE', '1'), ('PWD', '/home/robot_ws/build/nsc_description'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/home/robot_ws/install/nsc_description/local/lib/python3.10/dist-packages:/home/robot_ws/install/nsc_core/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/robot_ws/install/nsc_description:/home/robot_ws/install/nsc_core:/opt/ros/humble')]), 'shell': False}
+[0.456898] (nsc_core) JobProgress: {'identifier': 'nsc_core', 'progress': 'install'}
+[0.457238] (nsc_core) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/robot_ws/build/nsc_core'], 'cwd': '/home/robot_ws/build/nsc_core', 'env': OrderedDict([('HOSTNAME', 'entity014'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home'), ('ROS_PYTHON_VERSION', '3'), ('COLCON_PREFIX_PATH', '/home/robot_ws/install'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('XDG_RUNTIME_DIR', '/tmp/runtime-root'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('ROS_DOMAIN_ID', '10'), ('AMENT_PREFIX_PATH', '/home/robot_ws/install/nsc_description:/home/robot_ws/install/nsc_core:/opt/ros/humble'), ('NO_AT_BRIDGE', '1'), ('PWD', '/home/robot_ws/build/nsc_core'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/home/robot_ws/install/nsc_description/local/lib/python3.10/dist-packages:/home/robot_ws/install/nsc_core/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/robot_ws/install/nsc_description:/home/robot_ws/install/nsc_core:/opt/ros/humble')]), 'shell': False}
+[0.464815] (nsc_description) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.465060] (nsc_description) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/environment/pythonpath.sh\n'}
+[0.465128] (nsc_description) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/environment/pythonpath.dsv\n'}
+[0.465185] (nsc_description) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_description/local/lib/python3.10/dist-packages/src-0.0.0-py3.10.egg-info\n'}
+[0.465238] (nsc_description) StdoutLine: {'line': b'-- Installing: /home/robot_ws/install/nsc_description/local/lib/python3.10/dist-packages/src-0.0.0-py3.10.egg-info/top_level.txt\n'}
+[0.465331] (nsc_description) StdoutLine: {'line': b'-- Installing: /home/robot_ws/install/nsc_description/local/lib/python3.10/dist-packages/src-0.0.0-py3.10.egg-info/SOURCES.txt\n'}
+[0.465426] (nsc_description) StdoutLine: {'line': b'-- Installing: /home/robot_ws/install/nsc_description/local/lib/python3.10/dist-packages/src-0.0.0-py3.10.egg-info/PKG-INFO\n'}
+[0.465475] (nsc_description) StdoutLine: {'line': b'-- Installing: /home/robot_ws/install/nsc_description/local/lib/python3.10/dist-packages/src-0.0.0-py3.10.egg-info/dependency_links.txt\n'}
+[0.465523] (nsc_description) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_description/local/lib/python3.10/dist-packages/src\n'}
+[0.465569] (nsc_description) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_description/local/lib/python3.10/dist-packages/src/__init__.py\n'}
+[0.466718] (nsc_core) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.467833] (nsc_core) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_core/share/nsc_core/environment/pythonpath.sh\n'}
+[0.467982] (nsc_core) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_core/share/nsc_core/environment/pythonpath.dsv\n'}
+[0.468130] (nsc_core) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_core/local/lib/python3.10/dist-packages/src-0.0.0-py3.10.egg-info\n'}
+[0.468191] (nsc_core) StdoutLine: {'line': b'-- Installing: /home/robot_ws/install/nsc_core/local/lib/python3.10/dist-packages/src-0.0.0-py3.10.egg-info/top_level.txt\n'}
+[0.468248] (nsc_core) StdoutLine: {'line': b'-- Installing: /home/robot_ws/install/nsc_core/local/lib/python3.10/dist-packages/src-0.0.0-py3.10.egg-info/SOURCES.txt\n'}
+[0.468302] (nsc_core) StdoutLine: {'line': b'-- Installing: /home/robot_ws/install/nsc_core/local/lib/python3.10/dist-packages/src-0.0.0-py3.10.egg-info/PKG-INFO\n'}
+[0.468363] (nsc_core) StdoutLine: {'line': b'-- Installing: /home/robot_ws/install/nsc_core/local/lib/python3.10/dist-packages/src-0.0.0-py3.10.egg-info/dependency_links.txt\n'}
+[0.468422] (nsc_core) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_core/local/lib/python3.10/dist-packages/src\n'}
+[0.468479] (nsc_core) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_core/local/lib/python3.10/dist-packages/src/__init__.py\n'}
+[0.468553] (nsc_core) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_core/local/lib/python3.10/dist-packages/src/camera_control.py\n'}
+[0.468614] (nsc_core) StdoutLine: {'line': b'-- Installing: /home/robot_ws/install/nsc_core/local/lib/python3.10/dist-packages/src/gui.py\n'}
+[0.468670] (nsc_core) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_core/local/lib/python3.10/dist-packages/src/joint_control.py\n'}
+[0.468753] (nsc_core) StdoutLine: {'line': b'-- Installing: /home/robot_ws/install/nsc_core/local/lib/python3.10/dist-packages/src/video_capture.py\n'}
+[0.500724] (-) TimerEvent: {}
+[0.509629] (nsc_description) StdoutLine: {'line': b"Listing '/home/robot_ws/install/nsc_description/local/lib/python3.10/dist-packages/src'...\n"}
+[0.516325] (nsc_description) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/urdf\n'}
+[0.516807] (nsc_description) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/urdf/leg.urdf.xacro\n'}
+[0.516889] (nsc_description) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/urdf/model\n'}
+[0.516975] (nsc_description) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/urdf/model/left_leg2.stl\n'}
+[0.517039] (nsc_description) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/urdf/model/right_leg3.stl\n'}
+[0.517108] (nsc_description) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/urdf/model/left_leg1.stl\n'}
+[0.517173] (nsc_description) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/urdf/model/right_arm1.stl\n'}
+[0.517235] (nsc_description) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/urdf/model/right_arm4.stl\n'}
+[0.517291] (nsc_description) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/urdf/model/left_arm2.stl\n'}
+[0.517348] (nsc_description) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/urdf/model/left_arm3.stl\n'}
+[0.517406] (nsc_description) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/urdf/model/right_leg2.stl\n'}
+[0.517466] (nsc_description) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/urdf/model/left_arm1.stl\n'}
+[0.517568] (nsc_description) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/urdf/model/left_leg3.stl\n'}
+[0.517633] (nsc_description) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/urdf/model/body.stl\n'}
+[0.517696] (nsc_description) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/urdf/model/right_leg1.stl\n'}
+[0.517861] (nsc_description) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/urdf/model/left_arm4.stl\n'}
+[0.517925] (nsc_description) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/urdf/model/head.stl\n'}
+[0.517986] (nsc_description) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/urdf/model/right_arm3.stl\n'}
+[0.518096] (nsc_description) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/urdf/model/right_arm2.stl\n'}
+[0.518163] (nsc_description) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/urdf/top_arm.urdf.xacro\n'}
+[0.518223] (nsc_description) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/urdf/bottom_leg.urdf.xacro\n'}
+[0.518280] (nsc_description) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/urdf/arm.urdf.xacro\n'}
+[0.518337] (nsc_description) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/urdf/foot.urdf.xacro\n'}
+[0.518394] (nsc_description) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/urdf/base.urdf.xacro\n'}
+[0.518504] (nsc_description) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/urdf/head.urdf.xacro\n'}
+[0.518557] (nsc_description) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/urdf/camera.transmission.xacro\n'}
+[0.518630] (nsc_description) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/urdf/properties.urdf.xacro\n'}
+[0.518704] (nsc_description) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/urdf/finger.urdf.xacro\n'}
+[0.518795] (nsc_description) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/urdf/leg.transmission.xacro\n'}
+[0.518863] (nsc_description) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/urdf/hand.urdf.xacro\n'}
+[0.518919] (nsc_description) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/urdf/camera.urdf.xacro\n'}
+[0.518975] (nsc_description) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/urdf/top_foot.urdf.xacro\n'}
+[0.519032] (nsc_description) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/urdf/robot.urdf.xacro\n'}
+[0.519089] (nsc_description) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/urdf/top_leg.urdf.xacro\n'}
+[0.519146] (nsc_description) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/urdf/arm.transmission.xacro\n'}
+[0.519208] (nsc_description) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/launch\n'}
+[0.519265] (nsc_description) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/launch/description.launch.py\n'}
+[0.519332] (nsc_description) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/launch/gazebo.launch.py\n'}
+[0.519395] (nsc_description) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/rviz\n'}
+[0.519479] (nsc_description) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/src\n'}
+[0.519542] (nsc_description) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/src/__init__.py\n'}
+[0.519609] (nsc_description) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/worlds\n'}
+[0.520097] (nsc_description) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/worlds/world.world\n'}
+[0.521070] (nsc_description) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/config\n'}
+[0.522393] (nsc_description) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/config/controllers.yaml\n'}
+[0.522672] (nsc_description) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_description/share/ament_index/resource_index/package_run_dependencies/nsc_description\n'}
+[0.522986] (nsc_description) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_description/share/ament_index/resource_index/parent_prefix_path/nsc_description\n'}
+[0.523458] (nsc_description) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/environment/ament_prefix_path.sh\n'}
+[0.523560] (nsc_description) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/environment/ament_prefix_path.dsv\n'}
+[0.523624] (nsc_description) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/environment/path.sh\n'}
+[0.523680] (nsc_description) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/environment/path.dsv\n'}
+[0.523764] (nsc_description) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/local_setup.bash\n'}
+[0.523817] (nsc_description) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/local_setup.sh\n'}
+[0.523870] (nsc_description) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/local_setup.zsh\n'}
+[0.523922] (nsc_description) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/local_setup.dsv\n'}
+[0.523975] (nsc_description) StdoutLine: {'line': b'-- Installing: /home/robot_ws/install/nsc_description/share/nsc_description/package.dsv\n'}
+[0.524032] (nsc_description) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_description/share/ament_index/resource_index/packages/nsc_description\n'}
+[0.524086] (nsc_description) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/cmake/nsc_descriptionConfig.cmake\n'}
+[0.524166] (nsc_description) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/cmake/nsc_descriptionConfig-version.cmake\n'}
+[0.524225] (nsc_description) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/package.xml\n'}
+[0.524279] (nsc_core) StdoutLine: {'line': b"Listing '/home/robot_ws/install/nsc_core/local/lib/python3.10/dist-packages/src'...\n"}
+[0.524481] (nsc_core) StdoutLine: {'line': b"Compiling '/home/robot_ws/install/nsc_core/local/lib/python3.10/dist-packages/src/gui.py'...\n"}
+[0.524543] (nsc_core) StdoutLine: {'line': b"Compiling '/home/robot_ws/install/nsc_core/local/lib/python3.10/dist-packages/src/video_capture.py'...\n"}
+[0.524600] (nsc_description) CommandEnded: {'returncode': 0}
+[0.526865] (nsc_core) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_core/share/nsc_core/src\n'}
+[0.527045] (nsc_core) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_core/share/nsc_core/src/__init__.py\n'}
+[0.527117] (nsc_core) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_core/share/nsc_core/src/camera_control.py\n'}
+[0.527176] (nsc_core) StdoutLine: {'line': b'-- Installing: /home/robot_ws/install/nsc_core/share/nsc_core/src/gui.py\n'}
+[0.527239] (nsc_core) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_core/share/nsc_core/src/joint_control.py\n'}
+[0.527390] (nsc_core) StdoutLine: {'line': b'-- Installing: /home/robot_ws/install/nsc_core/share/nsc_core/src/video_capture.py\n'}
+[0.527744] (nsc_core) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_core/share/nsc_core/launch\n'}
+[0.528080] (nsc_core) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_core/share/nsc_core/launch/gui.launch.py\n'}
+[0.528336] (nsc_core) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_core/share/nsc_core/launch/controller.launch.py\n'}
+[0.528593] (nsc_core) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_core/share/nsc_core/launch/imu.launch.py\n'}
+[0.528758] (nsc_core) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_core/share/nsc_core/config\n'}
+[0.528986] (nsc_core) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_core/lib/nsc_core/joint_control.py\n'}
+[0.529499] (nsc_core) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_core/lib/nsc_core/camera_control.py\n'}
+[0.529747] (nsc_core) StdoutLine: {'line': b'-- Installing: /home/robot_ws/install/nsc_core/lib/nsc_core/gui.py\n'}
+[0.530091] (nsc_core) StdoutLine: {'line': b'-- Installing: /home/robot_ws/install/nsc_core/lib/nsc_core/video_capture.py\n'}
+[0.530304] (nsc_core) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_core/share/ament_index/resource_index/package_run_dependencies/nsc_core\n'}
+[0.530537] (nsc_core) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_core/share/ament_index/resource_index/parent_prefix_path/nsc_core\n'}
+[0.530719] (nsc_core) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_core/share/nsc_core/environment/ament_prefix_path.sh\n'}
+[0.531101] (nsc_core) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_core/share/nsc_core/environment/ament_prefix_path.dsv\n'}
+[0.531336] (nsc_core) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_core/share/nsc_core/environment/path.sh\n'}
+[0.532201] (nsc_core) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_core/share/nsc_core/environment/path.dsv\n'}
+[0.532299] (nsc_core) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_core/share/nsc_core/local_setup.bash\n'}
+[0.532364] (nsc_core) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_core/share/nsc_core/local_setup.sh\n'}
+[0.532422] (nsc_core) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_core/share/nsc_core/local_setup.zsh\n'}
+[0.532477] (nsc_core) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_core/share/nsc_core/local_setup.dsv\n'}
+[0.532531] (nsc_core) StdoutLine: {'line': b'-- Installing: /home/robot_ws/install/nsc_core/share/nsc_core/package.dsv\n'}
+[0.532928] (nsc_core) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_core/share/ament_index/resource_index/packages/nsc_core\n'}
+[0.532992] (nsc_core) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_core/share/nsc_core/cmake/nsc_coreConfig.cmake\n'}
+[0.533048] (nsc_core) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_core/share/nsc_core/cmake/nsc_coreConfig-version.cmake\n'}
+[0.533101] (nsc_core) StdoutLine: {'line': b'-- Up-to-date: /home/robot_ws/install/nsc_core/share/nsc_core/package.xml\n'}
+[0.553389] (nsc_core) CommandEnded: {'returncode': 0}
+[0.587807] (nsc_description) JobEnded: {'identifier': 'nsc_description', 'rc': 0}
+[0.599825] (nsc_core) JobEnded: {'identifier': 'nsc_core', 'rc': 0}
+[0.601049] (-) TimerEvent: {}
+[0.601257] (-) EventReactorShutdown: {}

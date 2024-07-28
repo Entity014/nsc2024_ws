@@ -7,11 +7,10 @@
     <xacro:include filename="$(find nsc_description)/urdf/arm.urdf.xacro"/>
     <xacro:include filename="$(find nsc_description)/urdf/hand.urdf.xacro"/>
     <xacro:include filename="$(find nsc_description)/urdf/finger.urdf.xacro"/>
-    <xacro:include filename="$(find nsc_description)/urdf/top_foot.urdf.xacro"/>
     <xacro:include filename="$(find nsc_description)/urdf/top_arm.urdf.xacro"/>
     <xacro:include filename="$(find nsc_description)/urdf/top_leg.urdf.xacro"/>
-    <xacro:include filename="$(find nsc_description)/urdf/bottom_leg.urdf.xacro"/>
     <xacro:include filename="$(find nsc_description)/urdf/properties.urdf.xacro"/>
+    <xacro:include filename="$(find nsc_description)/urdf/camera.urdf.xacro"/>
 
     <xacro:head
         length="${head_length}"
@@ -134,8 +133,8 @@
         pos_x="${top_leg_pos_x}"
         pos_y="${top_leg_pos_y}"
         pos_z="${top_leg_pos_z}"
-        lower_limit="${-pi/2}"
-        upper_limit="${pi/2}"
+        lower_limit="${-pi}"
+        upper_limit="0"
     />
 
     <xacro:top_leg
@@ -147,8 +146,8 @@
         pos_x="${-top_leg_pos_x}"
         pos_y="${top_leg_pos_y}"
         pos_z="${top_leg_pos_z}"
-        lower_limit="${-pi/2}"
-        upper_limit="${pi/2}"
+        lower_limit="0"
+        upper_limit="${pi}"
     />
 
     <xacro:leg
@@ -157,6 +156,8 @@
         width="${leg_width}"
         height="${leg_height}"
         mass="${leg_mass}"
+        pos_x="${leg_pos_x}"
+        pos_y="${leg_pos_y}"
         pos_z="${leg_pos_z}"
     />
 
@@ -166,44 +167,9 @@
         width="${leg_width}"
         height="${leg_height}"
         mass="${leg_mass}"
+        pos_x="${-leg_pos_x}"
+        pos_y="${leg_pos_y}"
         pos_z="${leg_pos_z}"
-    />
-
-
-    <xacro:bottom_leg
-        side="right"
-        length="${bottom_leg_length}"
-        width="${bottom_leg_width}"
-        height="${bottom_leg_height}"
-        mass="${bottom_leg_mass}"
-        pos_z="${bottom_leg_pos_z}"
-    />
-
-    <xacro:bottom_leg
-        side="left"
-        length="${bottom_leg_length}"
-        width="${bottom_leg_width}"
-        height="${bottom_leg_height}"
-        mass="${bottom_leg_mass}"
-        pos_z="${bottom_leg_pos_z}"
-    />
-
-    <xacro:top_foot
-        side="right"
-        length="${top_foot_length}"
-        width="${top_foot_width}"
-        height="${top_foot_height}"
-        mass="${top_foot_mass}"
-        pos_z="${top_foot_pos_z}"
-    />
-
-    <xacro:top_foot
-        side="left"
-        length="${top_foot_length}"
-        width="${top_foot_width}"
-        height="${top_foot_height}"
-        mass="${top_foot_mass}"
-        pos_z="${top_foot_pos_z}"
     />
 
     <xacro:foot
@@ -223,12 +189,18 @@
         width="${foot_width}"
         height="${foot_height}"
         mass="${foot_mass}"
-        pos_x="${foot_pos_x}"
+        pos_x="-${foot_pos_x}"
         pos_y="${foot_pos_y}"
         pos_z="${foot_pos_z}"
     />
+
+    <xacro:camera>
+        <xacro:insert_block name="camera_pose" />
+    </xacro:camera>
 
     <xacro:include filename="$(find nsc_description)/urdf/arm.transmission.xacro"/>
+    <xacro:include filename="$(find nsc_description)/urdf/leg.transmission.xacro"/>
+    <xacro:include filename="$(find nsc_description)/urdf/camera.transmission.xacro"/>
 
     <ros2_control name="robot_gazebo_system" type="system">
         <hardware>
@@ -238,6 +210,11 @@
         <xacro:arm_transmission side="left" />
         <xacro:arm_right_transmission/>
         <xacro:arm_left_transmission/>
+        <xacro:leg_transmission side="right" />
+        <xacro:leg_transmission side="left" />
+        <xacro:leg_right_transmission/>
+        <xacro:leg_left_transmission/>
+        <xacro:camera_transmission/>
     </ros2_control>
 
     <gazebo>

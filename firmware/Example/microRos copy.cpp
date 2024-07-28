@@ -53,6 +53,8 @@
 //------------------------------ < Define > -------------------------------------//
 
 IPAddress agent_ip(192, 168, 2, 34);
+char ssid[] = "REAI_ROBOT_2.4G";
+char psk[] = "reaicmubot";
 
 rcl_publisher_t encoder_publisher;
 rcl_publisher_t limit_publisher;
@@ -108,8 +110,8 @@ void setup()
 
   Wire.begin();
   Serial.begin(115200);
-  set_microros_wifi_transports("REAI_ROBOT_2.4G", "reaicmubot", agent_ip, 8888);
-  // set_microros_serial_transports(Serial);
+  // set_microros_wifi_transports(ssid, psk, agent_ip, 8888);
+  set_microros_serial_transports(Serial);
 
   tcaSelect(0);
   bool imu_ok1 = imu1.init();

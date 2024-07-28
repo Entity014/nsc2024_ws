@@ -1,2 +1,0 @@
-Invoking command in '/home/robot_ws/build/core': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/robot_ws/src/core -DCMAKE_INSTALL_PREFIX=/home/robot_ws/install/core
-Invoked command in '/home/robot_ws/build/core' returned '1': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/robot_ws/src/core -DCMAKE_INSTALL_PREFIX=/home/robot_ws/install/core

@@ -1,0 +1,60 @@
+[0.017s] Invoking command in '/home/robot_ws/build/nsc_core': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/robot_ws/build/nsc_core -- -j16 -l16
+[0.081s] Built target ament_cmake_python_copy_src
+[0.374s] running egg_info
+[0.375s] writing src.egg-info/PKG-INFO
+[0.375s] writing dependency_links to src.egg-info/dependency_links.txt
+[0.375s] writing top-level names to src.egg-info/top_level.txt
+[0.380s] reading manifest file 'src.egg-info/SOURCES.txt'
+[0.380s] writing manifest file 'src.egg-info/SOURCES.txt'
+[0.432s] Built target ament_cmake_python_build_src_egg
+[0.448s] Invoked command in '/home/robot_ws/build/nsc_core' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/robot_ws/build/nsc_core -- -j16 -l16
+[0.479s] Invoking command in '/home/robot_ws/build/nsc_core': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/robot_ws/build/nsc_core
+[0.490s] -- Install configuration: ""
+[0.490s] -- Up-to-date: /home/robot_ws/install/nsc_core/share/nsc_core/environment/pythonpath.sh
+[0.490s] -- Up-to-date: /home/robot_ws/install/nsc_core/share/nsc_core/environment/pythonpath.dsv
+[0.490s] -- Up-to-date: /home/robot_ws/install/nsc_core/local/lib/python3.10/dist-packages/src-0.0.0-py3.10.egg-info
+[0.490s] -- Installing: /home/robot_ws/install/nsc_core/local/lib/python3.10/dist-packages/src-0.0.0-py3.10.egg-info/top_level.txt
+[0.490s] -- Installing: /home/robot_ws/install/nsc_core/local/lib/python3.10/dist-packages/src-0.0.0-py3.10.egg-info/SOURCES.txt
+[0.490s] -- Installing: /home/robot_ws/install/nsc_core/local/lib/python3.10/dist-packages/src-0.0.0-py3.10.egg-info/PKG-INFO
+[0.491s] -- Installing: /home/robot_ws/install/nsc_core/local/lib/python3.10/dist-packages/src-0.0.0-py3.10.egg-info/dependency_links.txt
+[0.491s] -- Up-to-date: /home/robot_ws/install/nsc_core/local/lib/python3.10/dist-packages/src
+[0.491s] -- Up-to-date: /home/robot_ws/install/nsc_core/local/lib/python3.10/dist-packages/src/tempCodeRunnerFile.py
+[0.491s] -- Up-to-date: /home/robot_ws/install/nsc_core/local/lib/python3.10/dist-packages/src/__init__.py
+[0.491s] -- Up-to-date: /home/robot_ws/install/nsc_core/local/lib/python3.10/dist-packages/src/camera_control.py
+[0.491s] -- Up-to-date: /home/robot_ws/install/nsc_core/local/lib/python3.10/dist-packages/src/gui.py
+[0.491s] -- Up-to-date: /home/robot_ws/install/nsc_core/local/lib/python3.10/dist-packages/src/joint_control.py
+[0.491s] -- Installing: /home/robot_ws/install/nsc_core/local/lib/python3.10/dist-packages/src/video_capture.py
+[0.544s] Listing '/home/robot_ws/install/nsc_core/local/lib/python3.10/dist-packages/src'...
+[0.544s] Compiling '/home/robot_ws/install/nsc_core/local/lib/python3.10/dist-packages/src/video_capture.py'...
+[0.551s] -- Up-to-date: /home/robot_ws/install/nsc_core/share/nsc_core/src
+[0.553s] -- Up-to-date: /home/robot_ws/install/nsc_core/share/nsc_core/src/tempCodeRunnerFile.py
+[0.554s] -- Up-to-date: /home/robot_ws/install/nsc_core/share/nsc_core/src/__init__.py
+[0.554s] -- Up-to-date: /home/robot_ws/install/nsc_core/share/nsc_core/src/camera_control.py
+[0.555s] -- Up-to-date: /home/robot_ws/install/nsc_core/share/nsc_core/src/gui.py
+[0.556s] -- Up-to-date: /home/robot_ws/install/nsc_core/share/nsc_core/src/joint_control.py
+[0.556s] -- Installing: /home/robot_ws/install/nsc_core/share/nsc_core/src/video_capture.py
+[0.557s] -- Up-to-date: /home/robot_ws/install/nsc_core/share/nsc_core/launch
+[0.557s] -- Up-to-date: /home/robot_ws/install/nsc_core/share/nsc_core/launch/gui.launch.py
+[0.558s] -- Up-to-date: /home/robot_ws/install/nsc_core/share/nsc_core/launch/controller.launch.py
+[0.558s] -- Up-to-date: /home/robot_ws/install/nsc_core/share/nsc_core/launch/imu.launch.py
+[0.558s] -- Up-to-date: /home/robot_ws/install/nsc_core/share/nsc_core/config
+[0.558s] -- Up-to-date: /home/robot_ws/install/nsc_core/lib/nsc_core/joint_control.py
+[0.559s] -- Up-to-date: /home/robot_ws/install/nsc_core/lib/nsc_core/camera_control.py
+[0.559s] -- Up-to-date: /home/robot_ws/install/nsc_core/lib/nsc_core/gui.py
+[0.560s] -- Installing: /home/robot_ws/install/nsc_core/lib/nsc_core/video_capture.py
+[0.561s] -- Up-to-date: /home/robot_ws/install/nsc_core/share/ament_index/resource_index/package_run_dependencies/nsc_core
+[0.561s] -- Up-to-date: /home/robot_ws/install/nsc_core/share/ament_index/resource_index/parent_prefix_path/nsc_core
+[0.561s] -- Up-to-date: /home/robot_ws/install/nsc_core/share/nsc_core/environment/ament_prefix_path.sh
+[0.561s] -- Up-to-date: /home/robot_ws/install/nsc_core/share/nsc_core/environment/ament_prefix_path.dsv
+[0.562s] -- Up-to-date: /home/robot_ws/install/nsc_core/share/nsc_core/environment/path.sh
+[0.562s] -- Up-to-date: /home/robot_ws/install/nsc_core/share/nsc_core/environment/path.dsv
+[0.562s] -- Up-to-date: /home/robot_ws/install/nsc_core/share/nsc_core/local_setup.bash
+[0.562s] -- Up-to-date: /home/robot_ws/install/nsc_core/share/nsc_core/local_setup.sh
+[0.562s] -- Up-to-date: /home/robot_ws/install/nsc_core/share/nsc_core/local_setup.zsh
+[0.563s] -- Up-to-date: /home/robot_ws/install/nsc_core/share/nsc_core/local_setup.dsv
+[0.563s] -- Installing: /home/robot_ws/install/nsc_core/share/nsc_core/package.dsv
+[0.563s] -- Up-to-date: /home/robot_ws/install/nsc_core/share/ament_index/resource_index/packages/nsc_core
+[0.563s] -- Up-to-date: /home/robot_ws/install/nsc_core/share/nsc_core/cmake/nsc_coreConfig.cmake
+[0.563s] -- Up-to-date: /home/robot_ws/install/nsc_core/share/nsc_core/cmake/nsc_coreConfig-version.cmake
+[0.563s] -- Up-to-date: /home/robot_ws/install/nsc_core/share/nsc_core/package.xml
+[0.564s] Invoked command in '/home/robot_ws/build/nsc_core' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/robot_ws/build/nsc_core

@@ -23,7 +23,7 @@ ament_python_install_package(src)
 
 install(
   DIRECTORY 
-  urdf launch rviz src
+  urdf launch rviz src worlds config
   DESTINATION share/${PROJECT_NAME}
 )
 

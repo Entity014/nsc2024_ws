@@ -20,12 +20,24 @@
             </inertial>
         </link>
         <link name="${side}_hand_link3">
-            <visual>
-                <origin xyz="0 0 -0.0245" rpy="0 0 0"/>
-                <geometry>
-                    <box size="${length} ${width} ${height}"/>
-                </geometry>
-            </visual>
+            <xacro:if value="${side == 'right'}">
+                <visual>
+                    <origin xyz="0.0 0.0 0.0" rpy="0 0 ${-pi/2}"/>
+                    <geometry>
+                        <mesh filename="file://$(find nsc_description)/urdf/model/right_arm3.stl" scale="0.8 0.8 0.8"/>
+                        <!-- <box size="${length} ${width} ${height}"/> -->
+                    </geometry>
+                </visual>
+            </xacro:if>
+            <xacro:if value="${side == 'left'}">
+                <visual>
+                    <origin xyz="0.0 0.0 0.0" rpy="0 0 ${-pi/2}"/>
+                    <geometry>
+                        <mesh filename="file://$(find nsc_description)/urdf/model/left_arm3.stl" scale="0.8 0.8 0.8"/>
+                        <!-- <box size="${length} ${width} ${height}"/> -->
+                    </geometry>
+                </visual>
+            </xacro:if>
 
             <collision>
                 <origin xyz="0 0 -0.0245" rpy="0 0 0"/>

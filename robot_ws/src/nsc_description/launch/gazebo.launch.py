@@ -20,7 +20,7 @@ def generate_launch_description():
     )
 
     world_path = PathJoinSubstitution(
-        [FindPackageShare("nsc_description"), "worlds", ""]
+        [FindPackageShare("nsc_description"), "worlds", "world.world"]
     )
 
     return LaunchDescription(

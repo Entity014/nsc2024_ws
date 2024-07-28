@@ -1,0 +1,81 @@
+[0.024s] Invoking command in '/home/robot_ws/build/nsc_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/robot_ws/build/nsc_description -- -j16 -l16
+[0.127s] Built target ament_cmake_python_copy_src
+[0.691s] running egg_info
+[0.692s] writing src.egg-info/PKG-INFO
+[0.693s] writing dependency_links to src.egg-info/dependency_links.txt
+[0.693s] writing top-level names to src.egg-info/top_level.txt
+[0.698s] reading manifest file 'src.egg-info/SOURCES.txt'
+[0.700s] writing manifest file 'src.egg-info/SOURCES.txt'
+[0.761s] Built target ament_cmake_python_build_src_egg
+[0.789s] Invoked command in '/home/robot_ws/build/nsc_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/robot_ws/build/nsc_description -- -j16 -l16
+[0.843s] Invoking command in '/home/robot_ws/build/nsc_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/robot_ws/build/nsc_description
+[0.860s] -- Install configuration: ""
+[0.860s] -- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/environment/pythonpath.sh
+[0.861s] -- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/environment/pythonpath.dsv
+[0.861s] -- Up-to-date: /home/robot_ws/install/nsc_description/local/lib/python3.10/dist-packages/src-0.0.0-py3.10.egg-info
+[0.861s] -- Installing: /home/robot_ws/install/nsc_description/local/lib/python3.10/dist-packages/src-0.0.0-py3.10.egg-info/top_level.txt
+[0.861s] -- Installing: /home/robot_ws/install/nsc_description/local/lib/python3.10/dist-packages/src-0.0.0-py3.10.egg-info/SOURCES.txt
+[0.862s] -- Installing: /home/robot_ws/install/nsc_description/local/lib/python3.10/dist-packages/src-0.0.0-py3.10.egg-info/PKG-INFO
+[0.862s] -- Installing: /home/robot_ws/install/nsc_description/local/lib/python3.10/dist-packages/src-0.0.0-py3.10.egg-info/dependency_links.txt
+[0.862s] -- Up-to-date: /home/robot_ws/install/nsc_description/local/lib/python3.10/dist-packages/src
+[0.862s] -- Up-to-date: /home/robot_ws/install/nsc_description/local/lib/python3.10/dist-packages/src/__init__.py
+[0.933s] Listing '/home/robot_ws/install/nsc_description/local/lib/python3.10/dist-packages/src'...
+[0.941s] -- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/urdf
+[0.942s] -- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/urdf/leg.urdf.xacro
+[0.943s] -- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/urdf/model
+[0.944s] -- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/urdf/model/left_leg2.stl
+[0.944s] -- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/urdf/model/right_leg3.stl
+[0.945s] -- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/urdf/model/left_leg1.stl
+[0.945s] -- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/urdf/model/right_arm1.stl
+[0.946s] -- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/urdf/model/right_arm4.stl
+[0.946s] -- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/urdf/model/left_arm2.stl
+[0.946s] -- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/urdf/model/left_arm3.stl
+[0.946s] -- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/urdf/model/right_leg2.stl
+[0.946s] -- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/urdf/model/left_arm1.stl
+[0.946s] -- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/urdf/model/left_leg3.stl
+[0.946s] -- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/urdf/model/body.stl
+[0.946s] -- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/urdf/model/right_leg1.stl
+[0.946s] -- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/urdf/model/left_arm4.stl
+[0.947s] -- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/urdf/model/head.stl
+[0.947s] -- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/urdf/model/right_arm3.stl
+[0.947s] -- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/urdf/model/right_arm2.stl
+[0.947s] -- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/urdf/top_arm.urdf.xacro
+[0.947s] -- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/urdf/bottom_leg.urdf.xacro
+[0.947s] -- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/urdf/arm.urdf.xacro
+[0.947s] -- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/urdf/foot.urdf.xacro
+[0.947s] -- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/urdf/base.urdf.xacro
+[0.948s] -- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/urdf/head.urdf.xacro
+[0.949s] -- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/urdf/properties.urdf.xacro
+[0.949s] -- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/urdf/finger.urdf.xacro
+[0.949s] -- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/urdf/leg.transmission.xacro
+[0.949s] -- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/urdf/hand.urdf.xacro
+[0.950s] -- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/urdf/top_foot.urdf.xacro
+[0.950s] -- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/urdf/robot.urdf.xacro
+[0.950s] -- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/urdf/top_leg.urdf.xacro
+[0.951s] -- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/urdf/arm.transmission.xacro
+[0.951s] -- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/launch
+[0.951s] -- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/launch/description.launch.py
+[0.951s] -- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/launch/gazebo.launch.py
+[0.951s] -- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/rviz
+[0.952s] -- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/src
+[0.952s] -- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/src/__init__.py
+[0.953s] -- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/worlds
+[0.953s] -- Installing: /home/robot_ws/install/nsc_description/share/nsc_description/worlds/world.world
+[0.954s] -- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/config
+[0.955s] -- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/config/controllers.yaml
+[0.956s] -- Up-to-date: /home/robot_ws/install/nsc_description/share/ament_index/resource_index/package_run_dependencies/nsc_description
+[0.956s] -- Up-to-date: /home/robot_ws/install/nsc_description/share/ament_index/resource_index/parent_prefix_path/nsc_description
+[0.958s] -- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/environment/ament_prefix_path.sh
+[0.959s] -- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/environment/ament_prefix_path.dsv
+[0.960s] -- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/environment/path.sh
+[0.963s] -- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/environment/path.dsv
+[0.965s] -- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/local_setup.bash
+[0.965s] -- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/local_setup.sh
+[0.965s] -- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/local_setup.zsh
+[0.967s] -- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/local_setup.dsv
+[0.967s] -- Installing: /home/robot_ws/install/nsc_description/share/nsc_description/package.dsv
+[0.967s] -- Up-to-date: /home/robot_ws/install/nsc_description/share/ament_index/resource_index/packages/nsc_description
+[0.968s] -- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/cmake/nsc_descriptionConfig.cmake
+[0.969s] -- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/cmake/nsc_descriptionConfig-version.cmake
+[0.970s] -- Up-to-date: /home/robot_ws/install/nsc_description/share/nsc_description/package.xml
+[0.981s] Invoked command in '/home/robot_ws/build/nsc_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/robot_ws/build/nsc_description

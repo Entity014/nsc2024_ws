@@ -1,16 +1,46 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
     <xacro:macro name="foot" params="side length width height mass pos_x pos_y pos_z">
-        <link name="${side}_foot_link">
-            <visual>
-                <origin xyz="0 0 0" rpy="0 0 0"/>
-                <geometry>
-                    <box size="${length} ${width} ${height}"/>
-                </geometry>
-            </visual>
+        <link name="${side}_foot_link1">
+            <inertial>
+                <origin xyz="0 0 -0.1" rpy="0 0 0"/>
+                <mass value="${mass}"/>
+                <inertia ixx="${(1/12) * mass * ((width * width) + (height * height))}" ixy="0.0" ixz="0.0"
+                            iyy="${(1/12) * mass * ((length * length) + (height * height))}" iyz="0.0"
+                            izz="${(1/12) * mass * ((length * length) + (width * width))}"/>
+            </inertial>
+        </link>
+        <link name="${side}_foot_link2">
+                    <inertial>
+                <origin xyz="0 0 -0.1" rpy="0 0 0"/>
+                <mass value="${mass}"/>
+                <inertia ixx="${(1/12) * mass * ((width * width) + (height * height))}" ixy="0.0" ixz="0.0"
+                            iyy="${(1/12) * mass * ((length * length) + (height * height))}" iyz="0.0"
+                            izz="${(1/12) * mass * ((length * length) + (width * width))}"/>
+            </inertial>
+        </link>
+        <link name="${side}_foot_link3">
+            <xacro:if value="${side == 'right'}">
+                <visual>
+                    <origin xyz="0.0 0.0 0.0" rpy="0 0 ${-pi/2}"/>
+                    <geometry>
+                        <mesh filename="file://$(find nsc_description)/urdf/model/right_leg3.stl" scale="0.8 0.8 0.8"/>
+                        <!-- <box size="${length} ${width} ${height}"/> -->
+                    </geometry>
+                </visual>
+            </xacro:if>
+            <xacro:if value="${side == 'left'}">
+                <visual>
+                    <origin xyz="0.0 0.0 0.0" rpy="0 0 ${-pi/2}"/>
+                    <geometry>
+                        <mesh filename="file://$(find nsc_description)/urdf/model/left_leg3.stl" scale="0.8 0.8 0.8"/>
+                        <!-- <box size="${length} ${width} ${height}"/> -->
+                    </geometry>
+                </visual>
+            </xacro:if>
 
             <collision>
-                <origin xyz="0 0 0" rpy="0 0 0"/>
+                <origin xyz="0 0 -0.0245" rpy="0 0 0"/>
                 <geometry>
                     <box size="${length} ${width} ${height}"/>
                 </geometry>
@@ -25,12 +55,26 @@
             </inertial>
         </link>
         
-        <joint name="${side}_foot_joint" type="revolute">
+        <joint name="${side}_foot_joint1" type="revolute">
             <origin xyz="${pos_x} ${pos_y} ${pos_z}" rpy="0 0 0"/>
-            <parent link="${side}_top_foot_link"/>
-            <child link="${side}_foot_link"/>
+            <parent link="${side}_leg_link"/>
+            <child link="${side}_foot_link1"/>
+            <axis xyz="0 0 1" />
+            <limit lower="${-pi/2}" upper="${pi/2}" effort="-1" velocity="-1"/>
+        </joint>
+        <joint name="${side}_foot_joint2" type="revolute">
+            <origin xyz="0 0 0.05" rpy="0 0 0"/>
+            <parent link="${side}_foot_link1"/>
+            <child link="${side}_foot_link2"/>
+            <axis xyz="0 1 0" />
+            <limit lower="${-pi/2}" upper="${pi/2}" effort="-1" velocity="-1"/>
+        </joint>
+        <joint name="${side}_foot_joint3" type="revolute">
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <parent link="${side}_foot_link2"/>
+            <child link="${side}_foot_link3"/>
             <axis xyz="1 0 0" />
-            <limit lower="-${pi/2}" upper="${pi/2}" effort="-1" velocity="-1"/>
+            <limit lower="${-pi/2}" upper="${pi/2}" effort="-1" velocity="-1"/>
         </joint>
     </xacro:macro>
 </robot>

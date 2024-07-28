@@ -27,32 +27,39 @@ services:
       - /dev:/dev
     # command: sleep infinity
 
-  # uros-agent:
-  #   image: husarion/micro-ros-agent:humble
-  #   stdin_open: true
-  #   tty: true
-  #   network_mode: host
-  #   ipc: host
-  #   privileged: true
-  #   stop_grace_period: 1s
-  #   volumes:
-  #     - /dev:/dev
-  #   # devices:
-  #   #   - /dev/ttyACM0:/dev/ttyACM0
-  #   environment:
-  #     - ROS_DOMAIN_ID=10
-  #   command: sleep infinity
+  uros-agent:
+    image: husarion/micro-ros-agent:humble
+    stdin_open: true
+    tty: true
+    network_mode: host
+    ipc: host
+    privileged: true
+    stop_grace_period: 1s
+    volumes:
+      - /dev:/dev
+    environment:
+      - ROS_DOMAIN_ID=10
+    command: sleep infinity
 
-  # uros1-agent:
-  #   extends: uros-agent
-  #   command: ros2 run micro_ros_agent micro_ros_agent serial -D /dev/ttyACM0 serial -b 115200
+  uros1-agent:
+    extends: uros-agent
+    command: ros2 run micro_ros_agent micro_ros_agent serial -D /dev/ttyUSB0 serial -b 115200
+
+  # description:
+  #   extends: nsc_compose
+  #   command: bash -c "source ~/.bashrc && ros2 launch nsc_description description.launch.py"
 
   gazebo:
     extends: nsc_compose
     command: bash -c "source ~/.bashrc && ros2 launch nsc_description gazebo.launch.py"
-  
+
   imu:
     extends: nsc_compose
     command: bash -c "source ~/.bashrc && ros2 launch nsc_core imu.launch.py"
 
-
+  gui:
+    extends: nsc_compose
+    command: bash -c "source ~/.bashrc && ros2 launch nsc_core gui.launch.py"
+  controller:
+    extends: nsc_compose
+    command: bash -c "source ~/.bashrc && ros2 launch nsc_core controller.launch.py"

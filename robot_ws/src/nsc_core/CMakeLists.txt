@@ -30,6 +30,10 @@ install(
 )
 
 install(PROGRAMS
+  src/joint_control.py
+  src/camera_control.py
+  src/gui.py
+  src/video_capture.py
   DESTINATION lib/${PROJECT_NAME}
 )
 

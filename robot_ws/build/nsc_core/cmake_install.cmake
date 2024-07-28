@@ -75,6 +75,15 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/nsc_core" TYPE PROGRAM FILES
+    "/home/robot_ws/src/nsc_core/src/joint_control.py"
+    "/home/robot_ws/src/nsc_core/src/camera_control.py"
+    "/home/robot_ws/src/nsc_core/src/gui.py"
+    "/home/robot_ws/src/nsc_core/src/video_capture.py"
+    )
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/package_run_dependencies" TYPE FILE FILES "/home/robot_ws/build/nsc_core/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/nsc_core")
 endif()
 

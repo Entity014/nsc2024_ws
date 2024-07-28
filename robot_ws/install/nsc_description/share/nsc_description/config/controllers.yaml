@@ -5,10 +5,19 @@ controller_manager:
     joint_state_broadcaster:
       type: joint_state_broadcaster/JointStateBroadcaster
 
+    right_leg_controller:
+      type: position_controllers/JointGroupPositionController
+
+    left_leg_controller:
+      type: position_controllers/JointGroupPositionController
+
     right_arm_controller:
       type: position_controllers/JointGroupPositionController
 
     left_arm_controller:
+      type: position_controllers/JointGroupPositionController
+
+    camera_controller:
       type: position_controllers/JointGroupPositionController
 
 # Position Controllers ---------------------------------------
@@ -40,6 +49,48 @@ left_arm_controller:
       - left_hand_joint2
       - left_hand_joint3
       - left_finger_joint
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+      - velocity
+
+right_leg_controller:
+  ros__parameters:
+    joints:
+      - right_top_leg_joint1
+      - right_top_leg_joint2
+      - right_top_leg_joint3
+      - right_leg_joint
+      - right_foot_joint1
+      - right_foot_joint2
+      - right_foot_joint3
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+      - velocity
+
+left_leg_controller:
+  ros__parameters:
+    joints:
+      - left_top_leg_joint1
+      - left_top_leg_joint2
+      - left_top_leg_joint3
+      - left_leg_joint
+      - left_foot_joint1
+      - left_foot_joint2
+      - left_foot_joint3
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+      - velocity
+
+camera_controller:
+  ros__parameters:
+    joints:
+      - camera_joint1
     command_interfaces:
       - position
     state_interfaces:

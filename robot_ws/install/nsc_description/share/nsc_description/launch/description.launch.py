@@ -65,6 +65,9 @@ def generate_launch_description():
             "joint_state_broadcaster",
             "right_arm_controller",
             "left_arm_controller",
+            "right_leg_controller",
+            "left_leg_controller",
+            "camera_controller",
         ],
         condition=IfCondition(LaunchConfiguration("publish_controller")),
     )

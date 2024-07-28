@@ -72,6 +72,8 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
     "/home/robot_ws/src/nsc_description/launch"
     "/home/robot_ws/src/nsc_description/rviz"
     "/home/robot_ws/src/nsc_description/src"
+    "/home/robot_ws/src/nsc_description/worlds"
+    "/home/robot_ws/src/nsc_description/config"
     )
 endif()
 

@@ -2,15 +2,27 @@
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
     <xacro:macro name="finger" params="side length width height mass pos_x pos_y pos_z lower_limit upper_limit">
         <link name="${side}_finger_link">
-            <visual>
-                <origin xyz="0 0 -0.03" rpy="0 0 0"/>
-                <geometry>
-                    <box size="${length} ${width} ${height}"/>
-                </geometry>
-            </visual>
+            <xacro:if value="${side == 'right'}">
+                <visual>
+                    <origin xyz="0.0 0.0 0.0" rpy="0 0 ${-pi/2}"/>
+                    <geometry>
+                        <mesh filename="file://$(find nsc_description)/urdf/model/right_arm4.stl" scale="0.8 0.8 0.8"/>
+                        <!-- <box size="${length} ${width} ${height}"/> -->
+                    </geometry>
+                </visual>
+            </xacro:if>
+            <xacro:if value="${side == 'left'}">
+                <visual>
+                    <origin xyz="0.0 0.0 0.0" rpy="0 0 ${-pi/2}"/>
+                    <geometry>
+                        <mesh filename="file://$(find nsc_description)/urdf/model/left_arm4.stl" scale="0.8 0.8 0.8"/>
+                        <!-- <box size="${length} ${width} ${height}"/> -->
+                    </geometry>
+                </visual>
+            </xacro:if>
 
             <collision>
-                <origin xyz="0 0 -0.03" rpy="0 0 0"/>
+                <origin xyz="0 0 0.0" rpy="0 0 0"/>
                 <geometry>
                     <box size="${length} ${width} ${height}"/>
                 </geometry>

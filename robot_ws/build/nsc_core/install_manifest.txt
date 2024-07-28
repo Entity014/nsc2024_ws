@@ -4,13 +4,25 @@
 /home/robot_ws/install/nsc_core/local/lib/python3.10/dist-packages/src-0.0.0-py3.10.egg-info/SOURCES.txt
 /home/robot_ws/install/nsc_core/local/lib/python3.10/dist-packages/src-0.0.0-py3.10.egg-info/PKG-INFO
 /home/robot_ws/install/nsc_core/local/lib/python3.10/dist-packages/src-0.0.0-py3.10.egg-info/dependency_links.txt
-/home/robot_ws/install/nsc_core/local/lib/python3.10/dist-packages/src/arm_control.py
 /home/robot_ws/install/nsc_core/local/lib/python3.10/dist-packages/src/__init__.py
+/home/robot_ws/install/nsc_core/local/lib/python3.10/dist-packages/src/camera_control.py
 /home/robot_ws/install/nsc_core/local/lib/python3.10/dist-packages/src/gui.py
-/home/robot_ws/install/nsc_core/share/nsc_core/src/arm_control.py
+/home/robot_ws/install/nsc_core/local/lib/python3.10/dist-packages/src/video_capture copy.py
+/home/robot_ws/install/nsc_core/local/lib/python3.10/dist-packages/src/joint_control.py
+/home/robot_ws/install/nsc_core/local/lib/python3.10/dist-packages/src/video_capture.py
 /home/robot_ws/install/nsc_core/share/nsc_core/src/__init__.py
+/home/robot_ws/install/nsc_core/share/nsc_core/src/camera_control.py
 /home/robot_ws/install/nsc_core/share/nsc_core/src/gui.py
+/home/robot_ws/install/nsc_core/share/nsc_core/src/video_capture copy.py
+/home/robot_ws/install/nsc_core/share/nsc_core/src/joint_control.py
+/home/robot_ws/install/nsc_core/share/nsc_core/src/video_capture.py
+/home/robot_ws/install/nsc_core/share/nsc_core/launch/gui.launch.py
+/home/robot_ws/install/nsc_core/share/nsc_core/launch/controller.launch.py
 /home/robot_ws/install/nsc_core/share/nsc_core/launch/imu.launch.py
+/home/robot_ws/install/nsc_core/lib/nsc_core/joint_control.py
+/home/robot_ws/install/nsc_core/lib/nsc_core/camera_control.py
+/home/robot_ws/install/nsc_core/lib/nsc_core/gui.py
+/home/robot_ws/install/nsc_core/lib/nsc_core/video_capture.py
 /home/robot_ws/install/nsc_core/share/ament_index/resource_index/package_run_dependencies/nsc_core
 /home/robot_ws/install/nsc_core/share/ament_index/resource_index/parent_prefix_path/nsc_core
 /home/robot_ws/install/nsc_core/share/nsc_core/environment/ament_prefix_path.sh
